@@ -1,0 +1,24 @@
+{
+  "name": "mana-calc",
+  "version": "1.0.0",
+  "description": "A calculator for the quantity of lands a Magic deck should have",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barbier/mana-calc.git"
+  },
+  "keywords": [
+    "javascript",
+    "magic",
+    "mtg"
+  ],
+  "author": "Gabriel Barbier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/barbier/mana-calc/issues"
+  },
+  "homepage": "https://github.com/barbier/mana-calc#readme"
+}
