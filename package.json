@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/barbier/mana-calc/issues"
   },
-  "homepage": "https://github.com/barbier/mana-calc#readme"
+  "homepage": "https://github.com/barbier/mana-calc#readme",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^4.1.0",
+    "gulp-stylus": "^2.5.0"
+  }
 }
