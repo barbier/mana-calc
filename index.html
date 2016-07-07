@@ -17,50 +17,57 @@
     mana cost you have or pretend to have on your deck.
   </p>
   <div class="pure-g">
-  <form class="pure-form pure-form-stacked">
-    <div class="pure-u-md-2-5 pure-u-sm-1">
-        <label for="one-mana">1 mana</label>
-        <input id="one-mana" type="number" value="0">
-        <label for="two-mana">2 mana</label>
-        <input id="two-mana" type="number" value="0">
-        <label for="three-mana">3 mana</label>
-        <input id="three-mana" type="number" value="0">
-        <label for="four-mana">4 mana</label>
-        <input id="four-mana" type="number" value="0">
-        <label for="five-mana">5 mana</label>
-        <input id="five-mana" type="number" value="0">
-        <label for="six-mana">6 mana</label>
-        <input id="six-mana" type="number" value="0">
-        <label for="seven-mana">7 mana</label>
-        <input id="seven-mana" type="number" value="0">
-        <label for="eight-mana">8 mana</label>
-        <input id="eight-mana" type="number" value="0">
-        <label for="nine-mana">9 mana</label>
-        <input id="nine-mana" type="number" value="0">
-        <label for="ten-mana">10 mana</label>
-        <input id="ten-mana" type="number" value="0">
-        <label for="eleven-mana">11 mana</label>
-        <input id="eleven-mana" type="number" value="0">
-        <label for="twelve-mana">12 mana</label>
-        <input id="twelve-mana" type="number" value="0">
-        <label for="thirteen-mana">13 mana</label>
-        <input id="thirteen-mana" type="number" value="0">
-        <label for="fourteen-mana">14 mana</label>
-        <input id="fourteen-mana" type="number" value="0">
-        <label for="fifthteen-mana">15 mana</label>
-        <input id="fifthteen-mana" type="number" value="0">
-        <button class="button-xlarge pure-button pure-button-primary" type="button">
-          Calculate
-        </button>
+    <form action="#" class="pure-form pure-form-stacked">
+      <div class="pure-u-md-2-5 pure-u-sm-1">
+          <label for="one-mana">1 mana</label>
+          <input id="one-mana" type="number" value="0">
+          <label for="two-mana">2 mana</label>
+          <input id="two-mana" type="number" value="0">
+          <label for="three-mana">3 mana</label>
+          <input id="three-mana" type="number" value="0">
+          <label for="four-mana">4 mana</label>
+          <input id="four-mana" type="number" value="0">
+          <label for="five-mana">5 mana</label>
+          <input id="five-mana" type="number" value="0">
+          <label for="six-mana">6 mana</label>
+          <input id="six-mana" type="number" value="0">
+          <label for="seven-mana">7 mana</label>
+          <input id="seven-mana" type="number" value="0">
+          <label for="eight-mana">8 mana</label>
+          <input id="eight-mana" type="number" value="0">
+          <label for="nine-mana">9 mana</label>
+          <input id="nine-mana" type="number" value="0">
+          <label for="ten-mana">10 mana</label>
+          <input id="ten-mana" type="number" value="0">
+          <label for="eleven-mana">11 mana</label>
+          <input id="eleven-mana" type="number" value="0">
+          <label for="twelve-mana">12 mana</label>
+          <input id="twelve-mana" type="number" value="0">
+          <label for="thirteen-mana">13 mana</label>
+          <input id="thirteen-mana" type="number" value="0">
+          <label for="fourteen-mana">14 mana</label>
+          <input id="fourteen-mana" type="number" value="0">
+          <label for="fifteen-mana">15 mana</label>
+          <input id="fifteen-mana" type="number" value="0">
+          <button id="calc-button"
+            class="pure-button pure-button-primary" type="button">
+            Calculate
+          </button>
 
-    </div>
-    <div class="pure-u-md-2-5 pure-u-sm-1">
-      <p>
-        You should have <output>--</output> lands on your deck.
-      </p>
-    </div>
-  </form>
+      </div>
+      <div class="pure-u-md-2-5 pure-u-sm-1">
+        <p>
+          You should have <output id="total-lands">--</output> lands on your deck.
+        </p>
+      </div>
+    </form>
   </div>
-  <script src="./script/script.js"></script>
+  <!--
+  I'm sorry developers,
+  please use this block if you want to add a new feature to develop :(
+  <script src="./bower_components/jquery/dist/jquery.js"></script>
+  <script src="./script/app.js"></script>
+  -->
+  <script src="./script/app.min.js"></script>
 </body>
 </html>
