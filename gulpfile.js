@@ -2,7 +2,8 @@ var gulp = require('gulp'),
   stylus = require('gulp-stylus'),
   concat = require('gulp-concat'),
   connect = require('gulp-connect'),
-  csso = require('gulp-csso');
+  csso = require('gulp-csso'),
+  uglify = require('gulp-uglify');
 
 gulp.task('html', function () {
   gulp.src('./*.html')
@@ -23,9 +24,20 @@ gulp.task('styles', function () {
     .pipe(connect.reload());
 });
 
+gulp.task('scripts', function () {
+  gulp.src([
+      './bower_components/jquery/dist/jquery.js',
+      './script/app.js'
+    ])
+    .pipe(concat('app.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./script'));
+});
+
 gulp.task('watch', function () {
   gulp.watch('style/**/*.styl', ['styles']);
-  gulp.watch('./*.html', ['html']);
+  gulp.watch('./*.html', ['html'])
+  gulp.watch('script/app.js', ['scripts']);
 });
 
 gulp.task('connect', function () {
@@ -34,4 +46,4 @@ gulp.task('connect', function () {
   });
 });
 
-gulp.task('default', ['styles', 'watch', 'connect']);
+gulp.task('default', ['styles', 'scripts', 'watch', 'connect']);
