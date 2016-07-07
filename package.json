@@ -24,7 +24,9 @@
   "devDependencies": {
     "bower": "^1.7.9",
     "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
     "gulp-connect": "^4.1.0",
+    "gulp-csso": "^2.0.0",
     "gulp-stylus": "^2.5.0"
   }
 }
