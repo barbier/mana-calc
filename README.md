@@ -4,7 +4,7 @@ Hi! I'm a newbie Magic the Gathering player and one of my friends teached me how
 
 ## How to use it
 
-Just download it, you should be fine =)
+Access https://barbier.github.io/mana-calc/
 
 ## How to develop
 
