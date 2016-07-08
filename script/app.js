@@ -1,48 +1,37 @@
-(function() {
-  var button = $("#calc-button");
-  button.on('click', function() {
-    var oneMana = parseInt($("#one-mana").val()),
-      twoMana = parseInt($("#two-mana").val()),
-      threeMana = parseInt($("#three-mana").val()),
-      fourMana = parseInt($("#four-mana").val()),
-      fiveMana = parseInt($("#five-mana").val()),
-      sixMana = parseInt($("#six-mana").val()),
-      sevenMana = parseInt($("#seven-mana").val()),
-      eightMana = parseInt($("#eight-mana").val()),
-      nineMana = parseInt($("#nine-mana").val()),
-      tenMana = parseInt($("#ten-mana").val()),
-      elevenMana = parseInt($("#eleven-mana").val()),
-      twelveMana = parseInt($("#twelve-mana").val()),
-      thirteenMana = parseInt($("#thirteen-mana").val()),
-      fourteenMana = parseInt($("#fourteen-mana").val()),
-      fifteenMana = parseInt($("#fifteen-mana").val()),
-      totalLandsHTML = $("#total-lands");
-      totalCards = 0,
-      totalMana = 0,
-      totalLands = 0;
+{
+  let $ = document.querySelector.bind(document),
+      button = $('#calc-button'),
+      totalLandsNode = $('#total-lands'),
+      manaNode = [
+        $('#one-mana'),
+        $('#two-mana'),
+        $('#three-mana'),
+        $('#four-mana'),
+        $('#five-mana'),
+        $('#six-mana'),
+        $('#seven-mana'),
+        $('#eight-mana'),
+        $('#nine-mana'),
+        $('#ten-mana'),
+        $('#eleven-mana'),
+        $('#twelve-mana'),
+        $('#thirteen-mana'),
+        $('#fourteen-mana'),
+        $('#fifteen-mana'),
+      ];
 
-      totalCards = (oneMana + twoMana + threeMana + fourMana + fiveMana + sixMana + sevenMana + eightMana + nineMana + tenMana + elevenMana + twelveMana + thirteenMana + fourteenMana + fifteenMana);
-      console.log("Total de cartas: " + totalCards);
-      oneMana = oneMana * 1;
-      twoMana = twoMana * 2;
-      threeMana = threeMana * 3;
-      fourMana = fourMana * 4;
-      fiveMana = fiveMana * 5;
-      sixMana = sixMana * 6;
-      sevenMana = sevenMana * 7;
-      eightMana = eightMana * 8;
-      nineMana = nineMana * 9;
-      tenMana = tenMana * 10;
-      elevenMana = elevenMana * 11;
-      twelveMana = twelveMana * 12;
-      thirteenMana = thirteenMana * 13;
-      fourteenMana = fourteenMana * 14;
-      fifteenMana = fifteenMana * 15;
+  button.addEventListener('click', () => {
 
-      totalMana = (oneMana + twoMana + threeMana + fourMana + fiveMana + sixMana + sevenMana + eightMana + nineMana + tenMana + elevenMana + twelveMana + thirteenMana + fourteenMana + fifteenMana);
-      console.log("Total de mana: " + totalMana);
-      totalLands = parseInt((totalMana / totalCards) * 10);
+    let mana = manaNode.map(node => parseInt(node.value)),
+        totalCards = mana.reduce((a, b) => a + b, 0),
+        totalMana = mana
+          .map((mana, index) => mana * (index + 1))
+          .reduce((a, b) => a + b, 0),
+        totalLands = parseInt((totalMana / totalCards) * 10);
 
-      totalLandsHTML.html(totalLands);
+    console.log(`Total of cards: ${totalCards}`);
+    console.log(`Total of Mana: ${totalMana}`);
+    totalLandsNode.textContent = totalLands;
   });
-}());
+}
+

@@ -3,7 +3,8 @@ var gulp = require('gulp'),
   concat = require('gulp-concat'),
   connect = require('gulp-connect'),
   csso = require('gulp-csso'),
-  uglify = require('gulp-uglify');
+  uglify = require('gulp-uglify'),
+  babel = require('gulp-babel');
 
 gulp.task('html', function () {
   gulp.src('./*.html')
@@ -25,10 +26,8 @@ gulp.task('styles', function () {
 });
 
 gulp.task('scripts', function () {
-  gulp.src([
-      './bower_components/jquery/dist/jquery.js',
-      './script/app.js'
-    ])
+  gulp.src('./script/app.js')
+    .pipe(babel({presets: ['es2015']}))
     .pipe(concat('app.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./script'));
