@@ -22,13 +22,12 @@
   },
   "homepage": "https://github.com/barbier/mana-calc#readme",
   "devDependencies": {
+    "autoprefixer-stylus": "^0.9.4",
     "babel-preset-es2015": "^6.9.0",
-    "bower": "^1.7.9",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.0",
     "gulp-connect": "^4.1.0",
-    "gulp-csso": "^2.0.0",
     "gulp-stylus": "^2.5.0",
     "gulp-uglify": "^1.5.4"
   }
