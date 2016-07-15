@@ -3,6 +3,7 @@ const autoprefixer = require('autoprefixer-stylus'),
       concat = require('gulp-concat'),
       connect = require('gulp-connect'),
       gulp = require('gulp'),
+      plumber = require('gulp-plumber'),
       stylus = require('gulp-stylus'),
       uglify = require('gulp-uglify'),
 
@@ -12,6 +13,7 @@ gulp.task('html', () =>
 
 gulp.task('styles', () =>
   gulp.src('./style/stylus/main.styl')
+    .pipe(plumber())
     .pipe(stylus({
       compress: true,
       use: [autoprefixer()]
